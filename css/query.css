@@ -1,0 +1,131 @@
+/* TABLET + DESKTOP*/
+
+@media (min-width: 768px) {
+  /* NAVIGATION */
+
+  .navigation {
+    height: 80px;
+    padding: 0 3rem;
+  }
+
+  /* HERO */
+
+  .hero-info {
+    text-align: left;
+    padding: 5rem 4rem;
+    gap: 4rem;
+  }
+
+  .hero-links {
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+  }
+
+  .hero-photo img {
+    width: 400px;
+    height: 400px;
+  }
+
+  /* PROJECTS, SKILLS, ABOUT, CONTACT */
+
+  .projects,
+  .skills,
+  .about,
+  .experience,
+  .contact {
+    padding: 3rem 4rem;
+  }
+
+  /* PROJECTS */
+
+  .projects-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .projects-wrapper img {
+    height: 300px;
+  }
+
+  .project-links a {
+    padding: 0.9rem;
+  }
+
+  /* SKILLS */
+
+  .skills-wrapper {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+  }
+
+  /* EXPERIENCE */
+
+  .experience-timeline::before {
+    left: 40px;
+  }
+
+  .experience-timeline-item {
+    padding-left: 90px;
+  }
+
+  .experience-dot {
+    left: 22px;
+  }
+
+  .experience-timeline-content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  /* NAVIGATION */
+
+  .navigation {
+    height: 100px;
+    padding: 0 5rem;
+  }
+
+  .navigation-name {
+    display: none;
+  }
+  .navigation-icon {
+    display: none;
+  }
+
+  .navigation-list {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-right {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  /* HERO */
+
+  .hero-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+  .hero-photo img {
+    width: 320px;
+    height: 320px;
+  }
+}

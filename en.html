@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Single+Day&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/query.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+
+    <nav class="navigation">
+      <div class="navigation-name">
+        <p>Zuzana Oprendeková</p>
+      </div>
+
+      <!-- Hlavné menu – používa sa na mobile aj desktop -->
+      <ul class="navigation-list">
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#About">About me</a></li>
+        <li><a href="#Experience">Education and experience</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+
+      <!-- Pravá strana – dark mode + jazyk (zobrazí sa na tablete+) -->
+      <div class="nav-right">
+        <button id="theme-toggle" aria-label="Tmavý režim" class="theme-toggle">
+          <svg
+            class="sun"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg
+            class="moon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <div class="language-switcher">
+          <a href="index.html" class="lang-btn" data-lang="sk">SK</a>
+          <span class="lang-separator">|</span>
+          <a href="en.html" class="lang-btn" data-lang="en">EN</a>
+        </div>
+      </div>
+
+      <!-- Hamburger – iba na mobile -->
+      <button id="hamburger-btn" class="navigation-icon" aria-label="Menu">
+        ☰
+      </button>
+
+      <!-- Mobilné menu – obsahuje aj ovládacie prvky -->
+      <div id="mobile-menu" class="mobile-menu">
+        <ul class="mobile-nav-links">
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#About">About me</a></li>
+          <li><a href="#Experience">Education and experience</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+
+        <div class="mobile-controls">
+          <button id="mobile-theme-toggle" class="theme-toggle">
+            <svg
+              class="sun"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg
+              class="moon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <span id="theme-text">Dark mode</span>
+          </button>
+
+          <div class="language-switcher">
+            <a href="index.html" class="lang-btn" data-lang="sk">SK</a>
+            <span>|</span>
+            <a href="en.html" class="lang-btn" data-lang="en">EN</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SCROLL TO TOP BUTTON -->
+
+    <button id="scrollTopBtn">
+      <img src="./images/up-arrow.png" alt="Back to top" />
+    </button>
+
+    <!-- HERO-->
+
+    <section class="hero-info">
+      <div class="hero-text-wrapper">
+        <div class="hero-text">
+          <h1>Hello, I am Susane</h1>
+          <h2>Junior Front-end Developer</h2>
+          <p>Building responsive websites with HTML, CSS a JavaScript</p>
+        </div>
+
+        <div class="hero-links">
+          <a href="./cv/cv_sk.pdf" target="_blank">CV SK</a>
+          <a href="./cv/cv_en.pdf" target="_blank">CV EN</a>
+          <a href="#Projects">Projects</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="./images/cv-foto.jpg" alt="cv photo" />
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="Projects">
+      <h2>Projects</h2>
+      <section class="projects-wrapper">
+        <div class="projects-1">
+          <img src="./images/YourTravelAssistant.png" alt="project-1" />
+          <h3>Your Travel Assistant</h3>
+          <p>
+            Responsive website designed for an imaginary travel agency, created
+            using HTML and CSS.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/zuzanaopr/YourTravelAssistant"
+              target="_blank"
+              rel="noopener"
+              >Check on GitHub</a
+            >
+            <a
+              href="https://zuzanaopr.github.io/YourTravelAssistant/"
+              target="_blank"
+              rel="noopener"
+              >Live preview</a
+            >
+          </div>
+        </div>
+        <div class="projects-2">
+          <img src="./images/Netflix.png" alt="project-2" />
+          <h3>Netflix clone</h3>
+          <p>Netflix clone created using HTML, CSS, and JavaScript.</p>
+          <div class="project-links">
+            <a
+              href="https://github.com/zuzanaopr/engeto-projekt-2"
+              target="_blank"
+              rel="noopener"
+              >Check on GitHub</a
+            >
+            <a
+              href="https://zuzanaopr.github.io/engeto-projekt-2/"
+              target="_blank"
+              rel="noopener"
+              >Live preview</a
+            >
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="Skills">
+      <h2>Skills</h2>
+      <div class="skills-wrapper">
+        <div class="skill">
+          <img src="./images/html_logo.png" alt="html_logo" />
+          <div class="skill-level">Advanced</div>
+        </div>
+
+        <div class="skill">
+          <img src="./images/css_logo.png" alt="css_logo" />
+          <div class="skill-level">Advanced</div>
+        </div>
+
+        <div class="skill">
+          <img src="./images/js_logo.png" alt="js_logo" />
+          <div class="skill-level">Intermediate</div>
+        </div>
+
+        <div class="skill">
+          <img src="./images/ts_logo.png" alt="ts_logo" />
+          <div class="skill-level">Beginner</div>
+        </div>
+
+        <div class="skill">
+          <img src="./images/github_logo.png" alt="github_logo" />
+          <div class="skill-level">Beginner</div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-name">Responsive design</div>
+          <div class="skill-level">Advanced</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="About">
+      <h2>About me</h2>
+      <div class="about-text">
+        <p>
+          I am a Junior Front-End Developer with a completed certified course
+          from Engeto Academy (2025), through which I gained solid foundations
+          in HTML, CSS, and JavaScript with TypeScript, including work with
+          responsive design and accessibility.
+        </p>
+        <br />
+
+        <p>
+          I am currently working for the fashion brand Desigual as an Assistant
+          Store Manager. This experience has taught me excellent communication
+          skills, the ability to work under pressure, team organization, and
+          fast problem-solving.
+        </p>
+        <br />
+
+        <p>
+          My goal is to become a reliable and independent member of a team that
+          creates modern digital products.
+        </p>
+        <br />
+      </div>
+    </section>
+
+    <!-- EXPEIENCE -->
+
+    <section class="experience" id="Experience">
+      <div class="experience-wrapper">
+        <h2>Education and experience</h2>
+        <div class="experience-timeline">
+          <!-- Course -->
+          <div class="experience-timeline-item">
+            <div class="experience-dot"></div>
+            <div class="experience-timeline-content">
+              <h3>ENGETO ACADEMY</h3>
+              <h4>mar 2025 - nov 2025</h4>
+              <p>
+                Course focused on HTML, CSS, JavaScript, responsive design, and
+                TypeScript.
+              </p>
+              <a
+                href="./certifikat/CERTIFIKAT.pdf"
+                target="_blank"
+                class="certificate-link"
+              >
+                View certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Current job -->
+          <div class="experience-timeline-item">
+            <div class="experience-dot"></div>
+            <div class="experience-timeline-content">
+              <h3>DESIGUAL</h3>
+              <h4>jan 2023 - present</h4>
+              <p>Assistant Manager</p>
+            </div>
+          </div>
+
+          <!-- Studium -->
+          <div class="experience-timeline-item">
+            <div class="experience-dot"></div>
+            <div class="experience-timeline-content">
+              <h3>UNIVERSITY OF ECONOMICS</h3>
+              <h4>sep 2021</h4>
+              <p>Information Media and Services</p>
+              <p>
+                Studies focused on databases, programming, and IT (unfinished).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="Contact">
+      <div class="contact-container">
+        <h2>Contact</h2>
+        <div class="contact-wrapper">
+          <div class="contact-links">
+            <!-- mail -->
+            <a href="mailto:zuzanaopr1@gmail.com" class="contact-item">
+              <span class="contact-icon mail-icon"></span>
+              <span>zuzanaopr1@gmail.com</span>
+            </a>
+            <a href="tel:+421950511288" class="contact-item">
+              <span class="contact-icon phone-icon"></span>
+              <span>+421 950 511 288</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/zuzana-oprendeková-b82743370"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+              <span class="contact-icon linkedin-icon"></span>
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://github.com/zuzanaopr"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+              <span class="contact-icon github-icon"></span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.documentElement.lang = "en";
+    </script>
+
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
